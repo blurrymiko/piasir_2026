@@ -37,6 +37,7 @@ Enum metodo_pago {
   tarjeta
   transferencia
   seguro
+  pendiente
 }
 
 Table clinicas {
