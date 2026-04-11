@@ -1,7 +1,11 @@
 -- Roles y privilegios SQL: BBDD clinica_privada
 
+-- GRANT CONNECT ON DATABASE clinica_privada TO admin, consultas;
+-- GRANT USAGE ON SCHEMA public TO admin, consultas;
 CREATE ROLE admin WITH LOGIN PASSWORD '4WL6kcY9-kjE';
-
+-- GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO admin;
+-- GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO admin;
 CREATE ROLE consultas WITH LOGIN PASSWORD 'C2GnFn@v9M8.';
-
+-- GRANT SELECT ON ALL TABLES IN SCHEMA public TO consultas;
+-- GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO consultas;
 CREATE ROLE replica WITH LOGIN REPLICATION PASSWORD 'C2GnFn@v9M8.';
