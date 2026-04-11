@@ -3,8 +3,493 @@
   "darkMode": true,
   "gridEnabling": false,
   "detailLevel": "All",
-  "tablePositions": [],
+  "tablePositions": [
+    {
+      "name": "clinicas",
+      "schemaName": "public",
+      "x": 12,
+      "y": 360
+    },
+    {
+      "name": "aseguradoras",
+      "schemaName": "public",
+      "x": 12,
+      "y": 12
+    },
+    {
+      "name": "pacientes",
+      "schemaName": "public",
+      "x": 574.96484375,
+      "y": 420
+    },
+    {
+      "name": "especialidades",
+      "schemaName": "public",
+      "x": 12,
+      "y": 218
+    },
+    {
+      "name": "medicos",
+      "schemaName": "public",
+      "x": 574.96484375,
+      "y": 53
+    },
+    {
+      "name": "medicos_clinicas",
+      "schemaName": "public",
+      "x": 1177.68310546875,
+      "y": 12
+    },
+    {
+      "name": "clinicas_especialidades",
+      "schemaName": "public",
+      "x": 574.96484375,
+      "y": 946
+    },
+    {
+      "name": "citas",
+      "schemaName": "public",
+      "x": 1177.68310546875,
+      "y": 282
+    },
+    {
+      "name": "consultas",
+      "schemaName": "public",
+      "x": 1757.52587890625,
+      "y": 12
+    },
+    {
+      "name": "diagnosticos",
+      "schemaName": "public",
+      "x": 2331.41015625,
+      "y": 12
+    },
+    {
+      "name": "tratamientos",
+      "schemaName": "public",
+      "x": 12,
+      "y": 662
+    },
+    {
+      "name": "tratamientos_disponibles",
+      "schemaName": "public",
+      "x": 574.96484375,
+      "y": 1152
+    },
+    {
+      "name": "tratamientos_administrados",
+      "schemaName": "public",
+      "x": 2331.41015625,
+      "y": 315
+    },
+    {
+      "name": "pruebas",
+      "schemaName": "public",
+      "x": 12,
+      "y": 900
+    },
+    {
+      "name": "pruebas_disponibles",
+      "schemaName": "public",
+      "x": 574.96484375,
+      "y": 1358
+    },
+    {
+      "name": "pruebas_realizadas",
+      "schemaName": "public",
+      "x": 2331.41015625,
+      "y": 682
+    },
+    {
+      "name": "facturas",
+      "schemaName": "public",
+      "x": 1177.68310546875,
+      "y": 617
+    },
+    {
+      "name": "factura_detalle",
+      "schemaName": "public",
+      "x": 2967.9375,
+      "y": 12
+    }
+  ],
   "tableGroupCollapseStates": [],
   "stickyNoteLayouts": [],
-  "referencePaths": []
+  "referencePaths": [
+    {
+      "firstFieldNames": [
+        "id_aseguradora"
+      ],
+      "firstTableName": "aseguradoras",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_aseguradora"
+      ],
+      "secondTableName": "pacientes",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_especialidad"
+      ],
+      "firstTableName": "especialidades",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_especialidad"
+      ],
+      "secondTableName": "medicos",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_medico"
+      ],
+      "firstTableName": "medicos",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_medico"
+      ],
+      "secondTableName": "medicos_clinicas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_clinica"
+      ],
+      "firstTableName": "clinicas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_clinica"
+      ],
+      "secondTableName": "medicos_clinicas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_clinica"
+      ],
+      "firstTableName": "clinicas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_clinica"
+      ],
+      "secondTableName": "clinicas_especialidades",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_especialidad"
+      ],
+      "firstTableName": "especialidades",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_especialidad"
+      ],
+      "secondTableName": "clinicas_especialidades",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_paciente"
+      ],
+      "firstTableName": "pacientes",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_paciente"
+      ],
+      "secondTableName": "citas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_medico"
+      ],
+      "firstTableName": "medicos",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_medico"
+      ],
+      "secondTableName": "citas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_clinica"
+      ],
+      "firstTableName": "clinicas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_clinica"
+      ],
+      "secondTableName": "citas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_cita"
+      ],
+      "firstTableName": "citas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_cita"
+      ],
+      "secondTableName": "consultas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_consulta"
+      ],
+      "firstTableName": "consultas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_consulta"
+      ],
+      "secondTableName": "diagnosticos",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_clinica"
+      ],
+      "firstTableName": "clinicas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_clinica"
+      ],
+      "secondTableName": "tratamientos_disponibles",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_tratamiento"
+      ],
+      "firstTableName": "tratamientos",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_tratamiento"
+      ],
+      "secondTableName": "tratamientos_disponibles",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_consulta"
+      ],
+      "firstTableName": "consultas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_consulta"
+      ],
+      "secondTableName": "tratamientos_administrados",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_tratamiento"
+      ],
+      "firstTableName": "tratamientos",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_tratamiento"
+      ],
+      "secondTableName": "tratamientos_administrados",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_clinica"
+      ],
+      "firstTableName": "clinicas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_clinica"
+      ],
+      "secondTableName": "pruebas_disponibles",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_prueba"
+      ],
+      "firstTableName": "pruebas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_prueba"
+      ],
+      "secondTableName": "pruebas_disponibles",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_consulta"
+      ],
+      "firstTableName": "consultas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_consulta"
+      ],
+      "secondTableName": "pruebas_realizadas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_prueba"
+      ],
+      "firstTableName": "pruebas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_prueba"
+      ],
+      "secondTableName": "pruebas_realizadas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_paciente"
+      ],
+      "firstTableName": "pacientes",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_paciente"
+      ],
+      "secondTableName": "facturas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_clinica"
+      ],
+      "firstTableName": "clinicas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_clinica"
+      ],
+      "secondTableName": "facturas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_factura"
+      ],
+      "firstTableName": "facturas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_factura"
+      ],
+      "secondTableName": "factura_detalle",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_consulta"
+      ],
+      "firstTableName": "consultas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_consulta"
+      ],
+      "secondTableName": "factura_detalle",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_prueba_realizada"
+      ],
+      "firstTableName": "pruebas_realizadas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_prueba_realizada"
+      ],
+      "secondTableName": "factura_detalle",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_tratamiento_administrado"
+      ],
+      "firstTableName": "tratamientos_administrados",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_tratamiento_administrado"
+      ],
+      "secondTableName": "factura_detalle",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    }
+  ]
 }
