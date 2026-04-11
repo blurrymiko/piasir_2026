@@ -1,0 +1,7 @@
+-- Roles y privilegios SQL: BBDD clinica_privada
+
+CREATE ROLE admin WITH LOGIN PASSWORD '4WL6kcY9-kjE';
+
+CREATE ROLE consultas WITH LOGIN PASSWORD 'C2GnFn@v9M8.';
+
+CREATE ROLE replica WITH LOGIN REPLICATION PASSWORD 'C2GnFn@v9M8.';
