@@ -189,7 +189,6 @@ INSERT INTO facturas
 ('2603-CN-001', 5, 2, '2026-03-15', 85.00, 'pagada', 'seguro'),
 ('2603-CC-004', 10, 1, '2026-03-21', 170.00, 'anulada', 'efectivo');
 
-
 /* REVISAR
 -- Factura (detalle):
 INSERT INTO factura_detalle
