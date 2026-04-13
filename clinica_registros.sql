@@ -67,9 +67,55 @@ INSERT INTO medicos (id_especialidad, nombre, apellidos, num_colegiado, telefono
 
 
 -- Médicos-clínicas
+INSERT INTO medicos_clinicas (id_medico, id_clinica, es_principal, fecha_inicio) VALUES
+(1, 1, TRUE,  '2025-01-01'),
+(2, 1, TRUE,  '2025-01-01'),
+(3, 1, TRUE,  '2025-01-01'),
+(4, 1, TRUE,  '2025-01-01'),
+(5, 2, TRUE,  '2025-01-01'),
+(6, 2, TRUE,  '2025-01-01'),
+(1, 2, FALSE, '2025-06-01'),
+(2, 2, FALSE, '2025-06-01'),
+(4, 2, FALSE, '2025-06-01');
+
 -- Clínicas-especialidades
+INSERT INTO clinicas_especialidades (id_clinica, id_especialidad, disponible) VALUES
+(1, 1, TRUE),
+(1, 2, TRUE),
+(1, 3, TRUE),
+(1, 4, TRUE),
+(2, 1, TRUE),
+(2, 2, TRUE),
+(2, 4, TRUE);
+
 -- Tratamientos-disponibles
+INSERT INTO tratamientos_disponibles (id_clinica, id_tratamiento, disponible) VALUES
+(1, 2, TRUE),
+(1, 3, TRUE),
+(1, 4, TRUE),
+(1, 5, TRUE),
+(1, 9, TRUE),
+(1, 10, TRUE),
+(2, 1, TRUE),
+(2, 2, TRUE),
+(2, 3, TRUE),
+(2, 6, TRUE),
+(2, 7, TRUE),
+(2, 9, TRUE),
+(2, 10, TRUE);
+
 -- Pruebas-disponibles
+INSERT INTO pruebas_disponibles (id_clinica, id_prueba, disponible) VALUES
+(1, 1, TRUE),
+(1, 2, TRUE),
+(1, 3, TRUE),
+(1, 5, TRUE),
+(1, 6, TRUE),
+(1, 7, TRUE),
+(2, 1, TRUE),
+(2, 3, TRUE),
+(2, 4, TRUE),
+(2, 5, TRUE);
 
 -- Citas:
 INSERT INTO citas (id_paciente, id_medico, id_clinica, fecha_hora, motivo, estado) VALUES
