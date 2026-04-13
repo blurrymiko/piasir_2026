@@ -43,18 +43,18 @@ INSERT INTO pruebas (nombre, descripcion, precio_base) VALUES
 
 -- Pacientes:
 INSERT INTO pacientes (numero_historia, dni, nombre, apellidos, fecha_nacimiento, sexo, telefono, email, direccion, id_aseguradora, numero_poliza) VALUES
-(1, '12345678A', 'Ana', 'López Pérez', '1990-05-12', 'F', '690239031', 'ana.lopez@email.com', 'Calle Goya 22, Madrid', 1, 'SAN-001245'),
-(2, '23456789B', 'Carlos', 'Ruiz Martín', '1982-09-23', 'M', '628909310', 'carlos.ruiz@email.com', 'Calle Atocha 14, Madrid', 2, 'ADE-889912'),
-(3, '34567890C', 'Lucía', 'Fernández Soto', '1995-02-17', 'F', '698204260', 'lucia.fernandez@email.com', 'Calle Serrano 81, Madrid', 3, 'ASP-561234'),
-(4, '45678901D', 'Mario', 'Gómez Vidal', '1988-11-03', 'M', '620304022', 'mario.gomez@email.com', 'Calle Toledo 7, Madrid', NULL, NULL),
-(5, '56789012E', 'Sara', 'Jiménez Cano', '1992-07-29', 'F', '650352042', 'sara.jimenez@email.com', 'Paseo Extremadura 30, Madrid', 1, 'SAN-004587'),
-(6, '67890123F', 'David', 'Moreno Lara', '1979-01-08', 'M', '670864310', 'david.moreno@email.com', 'Calle Bravo Murillo 98, Madrid', 2, 'ADE-451223'),
-(7, '78901234G', 'Paula', 'Ortega Núñez', '2001-06-19', 'F', '632405610', 'paula.ortega@email.com', 'Calle Embajadores 55, Madrid', NULL, NULL),
-(8, '89012345H', 'Jorge', 'Castillo Rey', '1985-03-11', 'M', '690667190', 'jorge.castillo@email.com', 'Calle Arturo Soria 121, Madrid', 3, 'ASP-331278'),
-(9, '90123456J', 'Marta', 'Vega Santos', '1993-10-14', 'F', '635627086', 'marta.vega@email.com', 'Calle Velázquez 66, Madrid', 1, 'SAN-008932'),
-(10, '01234567K', 'Raúl', 'Prieto Gómez', '1975-12-02', 'M', '644903278', 'raul.prieto@email.com', 'Calle Príncipe de Vergara 41, Madrid', NULL, NULL),
-(11, '11223344L', 'Noelia', 'Campos Gil', '1998-04-21', 'F', '622903784', 'noelia.campos@email.com', 'Avenida Monforte de Lemos 15, Madrid', 2, 'ADE-771245'),
-(12, '22334455M', 'Hugo', 'Medina Pérez', '1987-08-30', 'M', '670322341', 'hugo.medina@email.com', 'Calle Oca 18, Madrid', 3, 'ASP-945612');
+('HIST-001', '12345678A', 'Ana', 'López Pérez', '1990-05-12', 'F', '690239031', 'ana.lopez@email.com', 'Calle Goya 22, Madrid', 1, 'SAN-001245'),
+('HIST-002', '23456789B', 'Carlos', 'Ruiz Martín', '1982-09-23', 'M', '628909310', 'carlos.ruiz@email.com', 'Calle Atocha 14, Madrid', 2, 'ADE-889912'),
+('HIST-003', '34567890C', 'Lucía', 'Fernández Soto', '1995-02-17', 'F', '698204260', 'lucia.fernandez@email.com', 'Calle Serrano 81, Madrid', 3, 'ASP-561234'),
+('HIST-004', '45678901D', 'Mario', 'Gómez Vidal', '1988-11-03', 'M', '620304022', 'mario.gomez@email.com', 'Calle Toledo 7, Madrid', NULL, NULL),
+('HIST-005', '56789012E', 'Sara', 'Jiménez Cano', '1992-07-29', 'F', '650352042', 'sara.jimenez@email.com', 'Paseo Extremadura 30, Madrid', 1, 'SAN-004587'),
+('HIST-006', '67890123F', 'David', 'Moreno Lara', '1979-01-08', 'M', '670864310', 'david.moreno@email.com', 'Calle Bravo Murillo 98, Madrid', 2, 'ADE-451223'),
+('HIST-007', '78901234G', 'Paula', 'Ortega Núñez', '2001-06-19', 'F', '632405610', 'paula.ortega@email.com', 'Calle Embajadores 55, Madrid', NULL, NULL),
+('HIST-008', '89012345H', 'Jorge', 'Castillo Rey', '1985-03-11', 'M', '690667190', 'jorge.castillo@email.com', 'Calle Arturo Soria 121, Madrid', 3, 'ASP-331278'),
+('HIST-009', '90123456J', 'Marta', 'Vega Santos', '1993-10-14', 'F', '635627086', 'marta.vega@email.com', 'Calle Velázquez 66, Madrid', 1, 'SAN-008932'),
+('HIST-010', '01234567K', 'Raúl', 'Prieto Gómez', '1975-12-02', 'M', '644903278', 'raul.prieto@email.com', 'Calle Príncipe de Vergara 41, Madrid', NULL, NULL),
+('HIST-011', '11223344L', 'Noelia', 'Campos Gil', '1998-04-21', 'F', '622903784', 'noelia.campos@email.com', 'Avenida Monforte de Lemos 15, Madrid', 2, 'ADE-771245'),
+('HIST-012', '22334455M', 'Hugo', 'Medina Pérez', '1987-08-30', 'M', '670322341', 'hugo.medina@email.com', 'Calle Oca 18, Madrid', 3, 'ASP-945612');
 
 -- Médicos:
 INSERT INTO medicos (id_especialidad, nombre, apellidos, num_colegiado, telefono, email) VALUES
@@ -160,7 +160,7 @@ INSERT INTO diagnosticos (id_consulta, sintomas, descripcion_diagnostico, observ
 
 -- Tratamientos (administrados):
 INSERT INTO tratamientos_administrados
-(id_consulta, id_tratamiento, fecha_inicio, fecha_fin, indicaciones, estado_tratamiento, observaciones) VALUES
+(id_consulta, id_tratamiento, fecha_inicio, fecha_fin, indicaciones, estado, observaciones) VALUES
 (1, 9, '2026-03-10', '2026-03-13', 'Tomar un analgésico cada 8 horas si dolor.', 'finalizado', 'Mejora progresiva sin complicaciones.'),
 (2, 3, '2026-03-11', NULL, 'Tomar una dosis diaria y controlar tensión arterial en domicilio.', 'activo', 'Se revisará evolución en 4 semanas.'),
 (3, 4, '2026-03-16', '2026-03-16', 'Aplicación local en consulta dermatológica.', 'finalizado', 'Procedimiento tolerado sin incidencias.'),
@@ -182,33 +182,28 @@ INSERT INTO pruebas_realizadas (id_consulta, id_prueba, fecha_solicitud, fecha_r
 
 -- Facturas:
 INSERT INTO facturas
-(numero_factura, id_paciente, id_clinica, fecha_emision, total, estado_factura, metodo_pago) VALUES
+(numero_factura, id_paciente, id_clinica, fecha_emision, total, estado, metodo_pago) VALUES
 ('2603-CC-001', 1, 1, '2026-03-10', 65.00, 'pagada', 'tarjeta'),
 ('2603-CC-002', 4, 1, '2026-03-14', 190.00, 'pagada', 'transferencia'),
 ('2603-CC-003', 3, 1, '2026-03-16', 260.00, 'pendiente', 'seguro'),
 ('2603-CN-001', 5, 2, '2026-03-15', 85.00, 'pagada', 'seguro'),
 ('2603-CC-004', 10, 1, '2026-03-21', 170.00, 'anulada', 'efectivo');
 
-/* REVISAR
 -- Factura (detalle):
 INSERT INTO factura_detalle
 (id_factura, id_consulta, id_prueba_realizada, id_tratamiento_administrado, concepto, cantidad, precio_unitario, subtotal) VALUES
 (1, 1, NULL, NULL, 'Consulta de medicina general', 1, 50.00, 50.00),
-(1, NULL, NULL, 9, 'Tratamiento analgésico', 1, 15.00, 15.00),
-
+(1, NULL, NULL, 1, 'Tratamiento analgésico', 1, 15.00, 15.00),
 (2, 4, NULL, NULL, 'Consulta de traumatología', 1, 70.00, 70.00),
 (2, NULL, 3, NULL, 'Radiografía', 1, 75.00, 75.00),
-(2, NULL, NULL, 5, 'Rehabilitación de rodilla', 1, 45.00, 45.00),
-
+(2, NULL, NULL, 4, 'Rehabilitación de rodilla', 1, 45.00, 45.00),
 (3, 3, NULL, NULL, 'Consulta de dermatología', 1, 60.00, 60.00),
 (3, NULL, 2, NULL, 'Biopsia cutánea', 1, 120.00, 120.00),
-(3, NULL, NULL, 4, 'Crioterapia dermatológica', 1, 80.00, 80.00),
-
+(3, NULL, NULL, 3, 'Crioterapia dermatológica', 1, 80.00, 80.00),
 (4, 5, NULL, NULL, 'Consulta de medicina general', 1, 40.00, 40.00),
 (4, NULL, 4, NULL, 'Analítica sanguínea', 1, 45.00, 45.00),
-
 (5, 9, NULL, NULL, 'Consulta de traumatología', 1, 60.00, 60.00),
-(5, NULL, NULL, 2, 'Infiltración articular', 1, 110.00, 110.00);
+(5, NULL, NULL, 8, 'Infiltración articular', 1, 110.00, 110.00);
 
 
 
