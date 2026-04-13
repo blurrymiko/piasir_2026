@@ -68,12 +68,12 @@ INSERT INTO medicos (id_especialidad, nombre, apellidos, num_colegiado, telefono
 
 -- Médicos-clínicas
 INSERT INTO medicos_clinicas (id_medico, id_clinica, es_principal, fecha_inicio) VALUES
-(1, 1, TRUE,  '2025-01-01'),
-(2, 1, TRUE,  '2025-01-01'),
-(3, 1, TRUE,  '2025-01-01'),
-(4, 1, TRUE,  '2025-01-01'),
-(5, 2, TRUE,  '2025-01-01'),
-(6, 2, TRUE,  '2025-01-01'),
+(1, 1, TRUE, '2025-01-01'),
+(2, 1, TRUE, '2025-01-01'),
+(3, 1, TRUE, '2025-01-01'),
+(4, 1, TRUE, '2025-01-01'),
+(5, 2, TRUE, '2025-01-01'),
+(6, 2, TRUE, '2025-01-01'),
 (1, 2, FALSE, '2025-06-01'),
 (2, 2, FALSE, '2025-06-01'),
 (4, 2, FALSE, '2025-06-01');
@@ -127,7 +127,7 @@ INSERT INTO citas (id_paciente, id_medico, id_clinica, fecha_hora, motivo, estad
 (6, 6, 2, '2026-03-15 16:00:00', 'Molestia muscular en muslo izquierdo', 'completada'),
 (7, 1, 1, '2026-03-18 08:45:00', 'Consulta general por cefalea', 'cancelada'),
 (8, 2, 1, '2026-03-19 10:15:00', 'Control cardiológico rutinario', 'completada'),
-(9, 3, 2, '2026-03-20 11:00:00', 'Dermatitis y picor persistente', 'completada'),
+(9, 3, 1, '2026-03-20 11:00:00', 'Dermatitis y picor persistente', 'completada'),
 (10, 4, 1, '2026-03-21 13:00:00', 'Dolor articular en rodilla izquierda', 'completada'),
 (11, 5, 2, '2026-04-02 09:00:00', 'Revisión anual de medicina general', 'pendiente'),
 (12, 6, 2, '2026-04-03 10:30:00', 'Dolor en tobillo tras ejercicio', 'confirmada'),
