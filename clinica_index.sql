@@ -18,7 +18,7 @@ CREATE INDEX idx_medicos_clinicas_medico
 CREATE INDEX idx_medicos_clinicas_clinica
     ON medicos_clinicas(id_clinica);
 
-CREATE UNIQUE INDEX uq_medico_una_clinica_principal
+CREATE UNIQUE INDEX idx_medico_clinica_principal
     ON medicos_clinicas(id_medico)
     WHERE es_principal = TRUE;
 
